@@ -1,5 +1,5 @@
 {
-  "name": "base-react-ts-setup",
+  "name": "phone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -42,7 +42,7 @@
     ]
   },
   "devDependencies": {
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.3",
     "system-fonts": "^1.1.5"
