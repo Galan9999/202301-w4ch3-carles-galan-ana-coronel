@@ -10,12 +10,19 @@ export const PhoneContextProvider = ({
 }: PhoneContextProviderProp): JSX.Element => {
   const [number, setNumber] = useState("");
 
-  const addNumber = (newNumber: string) => {
+  const modifyNumber = (newNumber: string): void => {
+    if (newNumber === "delete") {
+      setNumber("");
+      return;
+    }
+    if (number.length === 9) {
+      return;
+    }
     setNumber(`${number}${newNumber}`);
   };
 
   return (
-    <PhoneContext.Provider value={{ number, addNumber }}>
+    <PhoneContext.Provider value={{ number, modifyNumber }}>
       {children}
     </PhoneContext.Provider>
   );
