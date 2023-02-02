@@ -1,41 +1,16 @@
+import { useContext } from "react";
+import PhoneContext from "../../contexts/PhoneContext/PhoneContext";
+import Key from "../Key/Key";
 import "./Keyboard.css";
 
 const Keyboard = (): JSX.Element => {
+  const { addNumber } = useContext(PhoneContext);
+  const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "delete"];
   return (
     <ol className="keyboard">
-      <li>
-        <button className="key">1</button>
-      </li>
-      <li>
-        <button className="key">2</button>
-      </li>
-      <li>
-        <button className="key">3</button>
-      </li>
-      <li>
-        <button className="key">4</button>
-      </li>
-      <li>
-        <button className="key">5</button>
-      </li>
-      <li>
-        <button className="key">6</button>
-      </li>
-      <li>
-        <button className="key">7</button>
-      </li>
-      <li>
-        <button className="key">8</button>
-      </li>
-      <li>
-        <button className="key">9</button>
-      </li>
-      <li>
-        <button className="key">0</button>
-      </li>
-      <li>
-        <button className="key big">delete</button>
-      </li>
+      {numbers.map((listItem) => (
+        <Key number={listItem} action={addNumber} />
+      ))}
     </ol>
   );
 };
