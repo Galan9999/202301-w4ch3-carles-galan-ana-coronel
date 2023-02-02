@@ -28,9 +28,6 @@ li {
   align-items: center;
 }
 
-.message {
-  line-height: 50px;
-}
 .phone {
   display: grid;
   grid-template-columns: 1fr 1fr;

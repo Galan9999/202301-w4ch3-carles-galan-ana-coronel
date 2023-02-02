@@ -1,5 +1,5 @@
 import "./Actions.css";
-const Actions = () => {
+const Actions = (): JSX.Element => {
   return (
     <>
       <a href="call" className="call">
